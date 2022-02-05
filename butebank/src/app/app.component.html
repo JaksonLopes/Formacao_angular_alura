@@ -1,9 +1,4 @@
 <nova-transferencia (aoTranferir)="transferir($event)"></nova-transferencia>
-<p>
-  valor{{transferencias?.valor}}
-</p>
-<p>
-  valor{{transferencias?.destino}}
-</p>
 
-<extrato></extrato>
+<!-- para o componente receber os parametros precisa criar uma vareavel e anotar com @input() -->
+<extrato [transferencias]="transferencias"></extrato>

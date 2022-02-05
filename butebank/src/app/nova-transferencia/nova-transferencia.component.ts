@@ -11,8 +11,8 @@ export class NovaTransferenciaComponent implements OnInit {
 
   @Output() aoTranferir = new EventEmitter<any>();
 
-  valor: number= 12;
-  destino: number =55;
+  valor: number;
+  destino: number;
   constructor() { }
 
   ngOnInit() {

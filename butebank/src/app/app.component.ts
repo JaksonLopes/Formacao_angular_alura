@@ -6,12 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- transferencias:any;
+ transferencias:any[] = [];
 
 
   title = 'butebank';
+
   transferir($event){
-    this.transferencias = $event;
-    console.log($event)
+    const transferencia = {...$event, data: new Date()}
+    this.transferencias.push(transferencia);
+    console.log(transferencia)
   }
 }
