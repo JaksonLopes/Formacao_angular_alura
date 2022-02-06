@@ -10,5 +10,5 @@ export class AppComponent {
 
  constructor( private service: TranferenciaService){}
 
-  title = 'butebank';
+  title = 'bytebank';
 }
