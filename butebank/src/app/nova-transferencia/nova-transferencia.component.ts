@@ -1,5 +1,4 @@
 import { Transferencia } from './../models/tranferencias.model';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { TranferenciaService } from '../services/tranferencia.service';
@@ -14,22 +13,28 @@ export class NovaTransferenciaComponent implements OnInit {
 
   @Output() aoTranferir = new EventEmitter<any>();
 
-  valor: number;
-  destino: number;
+  valor: number = 0;
+  destino: number = 0;
   constructor(private serveice: TranferenciaService) { }
 
   ngOnInit() {
   }
   transferir() {
     const valorEmitir: Transferencia = { valor: this.valor, destino: this.destino };
+    if (this.valor >= 5 && this.destino >= 5) {
+      this.serveice.adiciona(valorEmitir)
+        .subscribe(resualtado => {
+          console.log(resualtado);
+          this.limparCampos;
+        },
+          (error) => console.error(error)
+        );
 
-    this.serveice.adiciona(valorEmitir)
-      .subscribe(resualtado => {
-        console.log(resualtado);
-        this.limparCampos;
-      },
-      (error)=> console.error(error)
-      );
+    }else{
+      alert("valor minimo para transferencia é 5")
+     
+    }
+
   }
   limparCampos() {
     this.valor = 0
