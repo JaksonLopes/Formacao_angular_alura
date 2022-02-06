@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { TranferenciaService } from '../services/tranferencia.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class NovaTransferenciaComponent implements OnInit {
 
   ngOnInit() {
   }
-  trnsferir(){
+  transferir(){
     console.log("boa, vc clicou")
     this.aoTranferir.emit({valor: this.valor, destino: this.destino})
     this.limparCampos()
