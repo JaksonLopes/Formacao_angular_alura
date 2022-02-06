@@ -11,8 +11,4 @@ export class AppComponent {
  constructor( private service: TranferenciaService){}
 
   title = 'butebank';
-
-  transferir($event){
-    this.service.adiciona($event);
-  }
 }
