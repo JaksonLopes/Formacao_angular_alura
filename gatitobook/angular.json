@@ -1,17 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "d1b65892-2e83-4e2f-98c8-565fadb7dbf9"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "gatitobook": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -34,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -97,7 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -130,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "gatitobook"
+  "defaultProject": "gatitobook",
+  "cli": {
+    "analytics": "50afb22d-5820-4918-9761-06657fa805e8"
+  }
 }
