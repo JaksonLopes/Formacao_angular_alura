@@ -1,6 +1,4 @@
 
-import { type } from "os";
-
 export interface Animal {
 
     id: number;
