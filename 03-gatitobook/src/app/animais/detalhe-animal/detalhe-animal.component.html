@@ -1,0 +1,17 @@
+<div *ngIf="animal$ |async as animal" class="bg-whit border">
+    <div class="row">
+        <div class="col-lg-8 ">
+            <app-animal 
+            [url]="animal.url"
+            [decricao]="animal.descripyion"></app-animal>
+        </div>
+        <div class="col-lg-4">
+            <small>
+                <p class="text-left break-word">{{animal.descripyion}}</p>
+                <i (click)="curtir()" class="fa fa-heart-o fa-2x mr-2 pull-left">{{animal.likes}}</i>
+                <i class="fa fa-comment-o fa-2x mr-2 pull-left">{{animal.comments}}</i>
+                <i (click)="excluir()" class="fa fa-trash-o fa-2x mr-2 pull-left">{{animal.comments}}</i>
+            </small>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,7 +17,8 @@ import { RodapeComponent } from './componentes/rodape/rodape.component';
   imports: [
     BrowserModule, 
     AppRoutingModule, 
-    HttpClientModule],
+    HttpClientModule,
+  AutenticacaoModule],
   providers: [],
   bootstrap: [AppComponent],
 })
